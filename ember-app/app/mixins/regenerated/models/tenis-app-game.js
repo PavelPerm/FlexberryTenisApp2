@@ -25,8 +25,8 @@ export let defineProjections = function (modelClass) {
     scoreP2: Projection.attr('Score p2')
   });
   modelClass.defineProjection('GameE', 'tenis-app-game', {
-    scoreP1: Projection.attr(''),
-    scoreP2: Projection.attr(''),
-    order: Projection.attr('')
+    scoreP1: Projection.attr('Очки И1'),
+    scoreP2: Projection.attr('Очки И2'),
+    order: Projection.attr('Порядок')
   });
 };

@@ -41,9 +41,9 @@ export let defineProjections = function (modelClass) {
       rating: Projection.attr('Рейтинг')
     }, { displayMemberPath: 'lastName' }),
     games: Projection.hasMany('tenis-app-game', 'Сыгранные игры', {
-      scoreP1: Projection.attr(''),
-      scoreP2: Projection.attr(''),
-      order: Projection.attr('')
+      scoreP1: Projection.attr('Очки И1'),
+      scoreP2: Projection.attr('Очки И2'),
+      order: Projection.attr('Порядок')
     })
   });
   modelClass.defineProjection('MatchL', 'tenis-app-match', {

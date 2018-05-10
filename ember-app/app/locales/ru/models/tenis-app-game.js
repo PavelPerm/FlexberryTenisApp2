@@ -13,13 +13,13 @@ export default {
     },
     GameE: {
       scoreP1: {
-        __caption__: ''
+        __caption__: 'Очки И1'
       },
       scoreP2: {
-        __caption__: ''
+        __caption__: 'Очки И2'
       },
       order: {
-        __caption__: ''
+        __caption__: 'Порядок'
       }
     }
   }

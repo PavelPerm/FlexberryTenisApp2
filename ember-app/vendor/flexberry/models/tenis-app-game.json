@@ -73,19 +73,19 @@
       "attrs": [
         {
           "name": "scoreP1",
-          "caption": "",
+          "caption": "Очки И1",
           "hidden": false,
           "index": 0
         },
         {
           "name": "scoreP2",
-          "caption": "",
+          "caption": "Очки И2",
           "hidden": false,
           "index": 1
         },
         {
           "name": "order",
-          "caption": "",
+          "caption": "Порядок",
           "hidden": false,
           "index": 2
         }
