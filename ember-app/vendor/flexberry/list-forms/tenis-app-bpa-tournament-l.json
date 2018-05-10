@@ -1,0 +1,14 @@
+﻿{
+  "newForm": "tenis-app-bpa-tournament-e",
+  "editForm": "tenis-app-bpa-tournament-e",
+  "caption": "Tournament",
+  "name": "TenisAppbpa_TournamentL",
+  "className": "bpa_TournamentL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "tenis-app-tournament",
+      "modelProjection": "bpa_TournamentL"
+    }
+  ]
+}

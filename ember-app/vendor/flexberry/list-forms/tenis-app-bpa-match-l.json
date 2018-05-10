@@ -1,0 +1,14 @@
+﻿{
+  "newForm": "tenis-app-bpa-match-e",
+  "editForm": "tenis-app-bpa-match-e",
+  "caption": "Match",
+  "name": "TenisAppbpa_MatchL",
+  "className": "bpa_MatchL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "tenis-app-match",
+      "modelProjection": "MatchL"
+    }
+  ]
+}

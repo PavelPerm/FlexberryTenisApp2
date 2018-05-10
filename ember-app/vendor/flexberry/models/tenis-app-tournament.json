@@ -1,0 +1,236 @@
+﻿{
+  "name": "TenisAppTournament",
+  "modelName": "tenis-app-tournament",
+  "className": "Tournament",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "name",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "startDate",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "finishDate",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "maxGameScore",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "minGamesForWin",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "challenger",
+      "relatedTo": "tenis-app-challenger",
+      "inverse": "tournament"
+    },
+    {
+      "name": "toss",
+      "relatedTo": "tenis-app-toss",
+      "inverse": "tournament"
+    }
+  ],
+  "projections": [
+    {
+      "name": "bpa_TournamentE",
+      "modelName": "tenis-app-tournament",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "startDate",
+          "caption": "Start date",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "finishDate",
+          "caption": "Finish date",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "maxGameScore",
+          "caption": "Max game score",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "minGamesForWin",
+          "caption": "Min games for win",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "bpa_ChallengerE",
+          "caption": "Challenger",
+          "name": "challenger",
+          "relatedTo": "tenis-app-challenger",
+          "inverse": null
+        },
+        {
+          "projectionName": "bpa_TossE",
+          "caption": "Toss",
+          "name": "toss",
+          "relatedTo": "tenis-app-toss",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "bpa_TournamentL",
+      "modelName": "tenis-app-tournament",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "startDate",
+          "caption": "Start date",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "finishDate",
+          "caption": "Finish date",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "maxGameScore",
+          "caption": "Max game score",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "minGamesForWin",
+          "caption": "Min games for win",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "TournamentE",
+      "modelName": "tenis-app-tournament",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "startDate",
+          "caption": "",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "finishDate",
+          "caption": "",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "maxGameScore",
+          "caption": "",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "minGamesForWin",
+          "caption": "",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "ChallengerE",
+          "caption": "Претенденты",
+          "name": "challenger",
+          "relatedTo": "tenis-app-challenger",
+          "inverse": null
+        },
+        {
+          "projectionName": "TossE",
+          "caption": "",
+          "name": "toss",
+          "relatedTo": "tenis-app-toss",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "TournamentL",
+      "modelName": "tenis-app-tournament",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "startDate",
+          "caption": "",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "finishDate",
+          "caption": "",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true
+}

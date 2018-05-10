@@ -1,0 +1,91 @@
+﻿{
+  "name": "TenisAppPlayer",
+  "modelName": "tenis-app-player",
+  "className": "Player",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "lastName",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "firstName",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "rating",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "1400",
+      "stored": true
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "bpa_PlayerE",
+      "modelName": "tenis-app-player",
+      "attrs": [
+        {
+          "name": "lastName",
+          "caption": "Last name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "firstName",
+          "caption": "First name",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "rating",
+          "caption": "Rating",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "bpa_PlayerL",
+      "modelName": "tenis-app-player",
+      "attrs": [
+        {
+          "name": "lastName",
+          "caption": "Last name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "firstName",
+          "caption": "First name",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "rating",
+          "caption": "Rating",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true
+}

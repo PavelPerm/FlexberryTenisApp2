@@ -1,0 +1,97 @@
+﻿{
+  "name": "TenisAppChallenger",
+  "modelName": "tenis-app-challenger",
+  "className": "Challenger",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "player",
+      "relatedTo": "tenis-app-player",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "tournament",
+      "relatedTo": "tenis-app-tournament",
+      "inverse": "challenger"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "bpa_ChallengerE",
+      "modelName": "tenis-app-challenger",
+      "attrs": [],
+      "belongsTo": [
+        {
+          "lookupValue": "LastName",
+          "lookupValueField": "lastName",
+          "relationName": "Player",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "lastName",
+              "caption": "Last name",
+              "hidden": true,
+              "index": 1
+            }
+          ],
+          "index": 0,
+          "caption": "Player",
+          "name": "player",
+          "relatedTo": "tenis-app-player",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "ChallengerE",
+      "modelName": "tenis-app-challenger",
+      "attrs": [],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Player",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "lastName",
+              "caption": "",
+              "hidden": false,
+              "index": 0
+            },
+            {
+              "name": "firstName",
+              "caption": "",
+              "hidden": false,
+              "index": 1
+            },
+            {
+              "name": "rating",
+              "caption": "",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": 3,
+          "caption": "",
+          "name": "player",
+          "relatedTo": "tenis-app-player",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true
+}

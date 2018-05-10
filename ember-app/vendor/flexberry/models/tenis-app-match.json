@@ -1,0 +1,274 @@
+﻿{
+  "name": "TenisAppMatch",
+  "modelName": "tenis-app-match",
+  "className": "Match",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "name",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "startDate",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "scoreP1",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "scoreP2",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "maxGameScore",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "minGamesForWin",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "player1",
+      "relatedTo": "tenis-app-player",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "player2",
+      "relatedTo": "tenis-app-player",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "games",
+      "relatedTo": "tenis-app-game",
+      "inverse": "match"
+    }
+  ],
+  "projections": [
+    {
+      "name": "MatchE",
+      "modelName": "tenis-app-match",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Название",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "startDate",
+          "caption": "Дата начала",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "maxGameScore",
+          "caption": "Max кол-во очков",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "minGamesForWin",
+          "caption": "Кол-во выигранных игр для победы",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "LastName",
+          "lookupValueField": "lastName",
+          "relationName": "Player1",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "lastName",
+              "caption": "",
+              "hidden": true,
+              "index": 5
+            },
+            {
+              "name": "firstName",
+              "caption": "Имя",
+              "hidden": false,
+              "index": 6
+            },
+            {
+              "name": "rating",
+              "caption": "Рейтинг",
+              "hidden": false,
+              "index": 7
+            }
+          ],
+          "index": 4,
+          "caption": "Игрок 1",
+          "name": "player1",
+          "relatedTo": "tenis-app-player",
+          "inverse": null
+        },
+        {
+          "lookupValue": "LastName",
+          "lookupValueField": "lastName",
+          "relationName": "Player2",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "lastName",
+              "caption": "",
+              "hidden": true,
+              "index": 9
+            },
+            {
+              "name": "firstName",
+              "caption": "Имя",
+              "hidden": false,
+              "index": 10
+            },
+            {
+              "name": "rating",
+              "caption": "Рейтинг",
+              "hidden": false,
+              "index": 11
+            }
+          ],
+          "index": 8,
+          "caption": "Игрок 2",
+          "name": "player2",
+          "relatedTo": "tenis-app-player",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "GameE",
+          "caption": "Сыгранные игры",
+          "name": "games",
+          "relatedTo": "tenis-app-game",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "MatchL",
+      "modelName": "tenis-app-match",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Название",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "startDate",
+          "caption": "Дата начала",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "scoreP1",
+          "caption": "Очки И1",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "scoreP2",
+          "caption": "Очки И2",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Player1",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "lastName",
+              "caption": "Игрок1 Фамилия",
+              "hidden": false,
+              "index": 4
+            },
+            {
+              "name": "firstName",
+              "caption": "Игрок1 Имя",
+              "hidden": true,
+              "index": 5
+            }
+          ],
+          "index": -1,
+          "caption": "Игрок1 Фамилия",
+          "name": "player1",
+          "relatedTo": "tenis-app-player",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Player2",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "lastName",
+              "caption": "Игрок2 Фамилия",
+              "hidden": false,
+              "index": 6
+            },
+            {
+              "name": "firstName",
+              "caption": "Игрок2 Имя",
+              "hidden": true,
+              "index": 7
+            }
+          ],
+          "index": -1,
+          "caption": "Игрок2 Фамилия",
+          "name": "player2",
+          "relatedTo": "tenis-app-player",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true
+}

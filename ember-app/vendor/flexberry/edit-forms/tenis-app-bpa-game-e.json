@@ -1,0 +1,13 @@
+﻿{
+  "propertyLookup": [],
+  "caption": "Игра в матче",
+  "name": "TenisAppbpa_GameE",
+  "className": "bpa_GameE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "tenis-app-game",
+      "modelProjection": "bpa_GameE"
+    }
+  ]
+}

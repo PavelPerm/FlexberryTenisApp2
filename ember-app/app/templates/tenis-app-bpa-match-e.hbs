@@ -1,0 +1,189 @@
+<h3 class="ui header">{{t 'forms.tenis-app-bpa-match-e.caption'}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=model.errors}}
+    </div>
+  </div>
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button type="submit" class="ui button save-button" {{action 'save'}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button type="submit" class="ui button save-del-button" {{action 'delete'}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button type="submit" class="ui button close-button" {{action 'close'}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="ui three column stackable grid">
+    <div class="sixteen wide column">
+      <div class="field">
+        {{
+          flexberry-field
+          placeholder=(t 'components.flexberry-field.placeholder')
+          readonly=readonly
+          required=true
+          value=model.name
+          class=(if model.errors.name 'error' '')
+          label=(t 'forms.tenis-app-bpa-match-e.name-caption')
+        }}
+        {{flexberry-validationmessage error=model.errors.name pointing="pointing"}}
+      </div>
+    </div>
+    <div class="three column row">
+      <div class="column">
+        <div class="field">
+          <label>{{t 'forms.tenis-app-bpa-match-e.startDate-caption'}}</label>
+          {{
+            flexberry-datepicker
+            placeholder='(no value)'
+            readonly=readonly
+            value=model.startDate
+            class=(if model.errors.startDate 'error' '')
+          }}
+          {{flexberry-validationmessage error=model.errors.startDate pointing="pointing"}}
+        </div>
+      </div>
+      <div class="column">
+        <div class="field">
+          {{
+            flexberry-field
+            placeholder=(t 'components.flexberry-field.placeholder')
+            readonly=readonly
+            required=true
+            value=model.maxGameScore
+            class=(if model.errors.maxGameScore 'error' '')
+            label=(t 'forms.tenis-app-bpa-match-e.maxGameScore-caption')
+          }}
+          {{flexberry-validationmessage error=model.errors.maxGameScore pointing="pointing"}}
+        </div>
+      </div>
+      <div class="column">
+        <div class="field">
+          {{
+            flexberry-field
+            placeholder=(t 'components.flexberry-field.placeholder')
+            readonly=readonly
+            required=true
+            value=model.minGamesForWin
+            class=(if model.errors.minGamesForWin 'error' '')
+            label=(t 'forms.tenis-app-bpa-match-e.minGamesForWin-caption')
+          }}
+          {{flexberry-validationmessage error=model.errors.minGamesForWin pointing="pointing"}}
+        </div>
+      </div>
+    </div>
+    <div class="eight wide column">
+      <div class="field">
+        <label>{{t 'forms.tenis-app-bpa-match-e.player1-caption'}}</label>
+        {{
+          flexberry-lookup
+          choose='showLookupDialog'
+          remove='removeLookupValue'
+          value=model.player1
+          displayAttributeName='lastName'
+          relationName='player1'
+          projection='bpa_PlayerL'
+          title=(t 'forms.tenis-app-bpa-match-e.player1-caption')
+          readonly=readonly
+        }}
+        {{flexberry-validationmessage error=model.errors.player1 pointing="pointing"}}
+      </div>
+
+      <div class="field">
+        {{
+          flexberry-field
+          placeholder=(t 'components.flexberry-field.placeholder')
+          readonly=true
+          required=true
+          value=model.player1.firstName
+          class=(if model.errors.player1.firstName 'error' '')
+          label=(t 'forms.tenis-app-bpa-match-e.player1.firstName-caption')
+        }}
+        {{flexberry-validationmessage error=model.errors.player1.firstName pointing="pointing"}}
+      </div>
+
+      <div class="field">
+        {{
+          flexberry-field
+          placeholder=(t 'components.flexberry-field.placeholder')
+          readonly=true
+          required=true
+          value=model.player1.rating
+          class=(if model.errors.player1.rating 'error' '')
+          label=(t 'forms.tenis-app-bpa-match-e.player1.rating-caption')
+        }}
+        {{flexberry-validationmessage error=model.errors.player1.rating pointing="pointing"}}
+      </div>
+    </div>
+    <div class="eight wide column">
+      <div class="field">
+        <label>{{t 'forms.tenis-app-bpa-match-e.player2-caption'}}</label>
+        {{
+          flexberry-lookup
+          choose='showLookupDialog'
+          remove='removeLookupValue'
+          value=model.player2
+          displayAttributeName='lastName'
+          relationName='player2'
+          projection='bpa_PlayerL'
+          title=(t 'forms.tenis-app-bpa-match-e.player2-caption')
+          readonly=readonly
+        }}
+        {{flexberry-validationmessage error=model.errors.player2 pointing="pointing"}}
+      </div>
+
+      <div class="field">
+        {{
+          flexberry-field
+          placeholder=(t 'components.flexberry-field.placeholder')
+          readonly=true
+          required=true
+          value=model.player2.firstName
+          class=(if model.errors.player2.firstName 'error' '')
+          label=(t 'forms.tenis-app-bpa-match-e.player2.firstName-caption')
+        }}
+        {{flexberry-validationmessage error=model.errors.player2.firstName pointing="pointing"}}
+      </div>
+
+      <div class="field">
+        {{
+          flexberry-field
+          placeholder=(t 'components.flexberry-field.placeholder')
+          readonly=true
+          required=true
+          value=model.player2.rating
+          class=(if model.errors.player2.rating 'error' '')
+          label=(t 'forms.tenis-app-bpa-match-e.player2.rating-caption')
+        }}
+        {{flexberry-validationmessage error=model.errors.player2.rating pointing="pointing"}}
+      </div>
+    </div>
+
+    <div class="sixteen wide column">
+      <div class="field">
+        <label>{{t 'forms.tenis-app-bpa-match-e.games-caption'}}</label>
+        {{
+          flexberry-groupedit
+          componentName="gamesGroupEdit"
+          mainModelProjection=modelProjection
+          modelProjection=modelProjection.attributes.games
+          content=model.games
+          readonly=readonly
+          orderable=false
+          class=(if model.errors.games 'error' '')
+        }}
+        {{flexberry-validationmessage error=model.errors.games pointing="pointing"}}
+      </div>
+    </div>
+  </div>
+</form>

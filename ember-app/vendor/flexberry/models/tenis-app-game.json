@@ -1,0 +1,99 @@
+﻿{
+  "name": "TenisAppGame",
+  "modelName": "tenis-app-game",
+  "className": "Game",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "order",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "scoreP1",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "scoreP2",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "match",
+      "relatedTo": "tenis-app-match",
+      "inverse": "games"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "bpa_GameE",
+      "modelName": "tenis-app-game",
+      "attrs": [
+        {
+          "name": "order",
+          "caption": "Order",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "scoreP1",
+          "caption": "Score p1",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "scoreP2",
+          "caption": "Score p2",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "GameE",
+      "modelName": "tenis-app-game",
+      "attrs": [
+        {
+          "name": "scoreP1",
+          "caption": "",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "scoreP2",
+          "caption": "",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "order",
+          "caption": "",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true
+}

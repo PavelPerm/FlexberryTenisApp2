@@ -1,0 +1,36 @@
+﻿{
+  "applicationCaption": "Tenis-app",
+  "applicationTitle": "Tenis-app",
+  "items": [
+    {
+      "link": null,
+      "menuName": "tenis-app",
+      "caption": "tenis-app",
+      "title": "tenis-app",
+      "children": [
+        {
+          "link": "tenis-app-bpa-match-l",
+          "menuName": null,
+          "caption": "Матчи",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "tenis-app-bpa-player-l",
+          "menuName": null,
+          "caption": "Игроки",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "tenis-app-bpa-tournament-l",
+          "menuName": null,
+          "caption": "Турниры",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

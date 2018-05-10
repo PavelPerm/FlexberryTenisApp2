@@ -1,0 +1,30 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Player1",
+      "projection": "bpa_PlayerL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Player2",
+      "projection": "bpa_PlayerL",
+      "detailModelName": null
+    }
+  ],
+  "caption": "Match",
+  "name": "TenisAppbpa_MatchE",
+  "className": "bpa_MatchE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "tenis-app-match",
+      "modelProjection": "MatchE"
+    }
+  ]
+}

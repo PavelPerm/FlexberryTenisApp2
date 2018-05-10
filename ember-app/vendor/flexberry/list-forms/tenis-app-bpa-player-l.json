@@ -1,0 +1,14 @@
+﻿{
+  "newForm": "tenis-app-bpa-player-e",
+  "editForm": "tenis-app-bpa-player-e",
+  "caption": "Player",
+  "name": "TenisAppbpa_PlayerL",
+  "className": "bpa_PlayerL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "tenis-app-player",
+      "modelProjection": "bpa_PlayerL"
+    }
+  ]
+}
