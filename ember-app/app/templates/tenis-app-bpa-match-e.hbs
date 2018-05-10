@@ -83,89 +83,93 @@
       </div>
     </div>
     <div class="eight wide column">
-      <div class="field">
-        <label>{{t 'forms.tenis-app-bpa-match-e.player1-caption'}}</label>
-        {{
-          flexberry-lookup
-          choose='showLookupDialog'
-          remove='removeLookupValue'
-          value=model.player1
-          displayAttributeName='lastName'
-          relationName='player1'
-          projection='bpa_PlayerL'
-          title=(t 'forms.tenis-app-bpa-match-e.player1-caption')
-          readonly=readonly
-        }}
-        {{flexberry-validationmessage error=model.errors.player1 pointing="pointing"}}
-      </div>
+      <div class="ui segment">
+        <div class="field">
+          <label>{{t 'forms.tenis-app-bpa-match-e.player1-caption'}}</label>
+          {{
+            flexberry-lookup
+            choose='showLookupDialog'
+            remove='removeLookupValue'
+            value=model.player1
+            displayAttributeName='lastName'
+            relationName='player1'
+            projection='bpa_PlayerL'
+            title=(t 'forms.tenis-app-bpa-match-e.player1-caption')
+            readonly=readonly
+          }}
+          {{flexberry-validationmessage error=model.errors.player1 pointing="pointing"}}
+        </div>
 
-      <div class="field">
-        {{
-          flexberry-field
-          placeholder=(t 'components.flexberry-field.placeholder')
-          readonly=true
-          required=true
-          value=model.player1.firstName
-          class=(if model.errors.player1.firstName 'error' '')
-          label=(t 'forms.tenis-app-bpa-match-e.player1.firstName-caption')
-        }}
-        {{flexberry-validationmessage error=model.errors.player1.firstName pointing="pointing"}}
-      </div>
+        <div class="field">
+          {{
+            flexberry-field
+            placeholder=(t 'components.flexberry-field.placeholder')
+            readonly=true
+            required=true
+            value=model.player1.firstName
+            class=(if model.errors.player1.firstName 'error' '')
+            label=(t 'forms.tenis-app-bpa-match-e.player1.firstName-caption')
+          }}
+          {{flexberry-validationmessage error=model.errors.player1.firstName pointing="pointing"}}
+        </div>
 
-      <div class="field">
-        {{
-          flexberry-field
-          placeholder=(t 'components.flexberry-field.placeholder')
-          readonly=true
-          required=true
-          value=model.player1.rating
-          class=(if model.errors.player1.rating 'error' '')
-          label=(t 'forms.tenis-app-bpa-match-e.player1.rating-caption')
-        }}
-        {{flexberry-validationmessage error=model.errors.player1.rating pointing="pointing"}}
+        <div class="field">
+          {{
+            flexberry-field
+            placeholder=(t 'components.flexberry-field.placeholder')
+            readonly=true
+            required=true
+            value=model.player1.rating
+            class=(if model.errors.player1.rating 'error' '')
+            label=(t 'forms.tenis-app-bpa-match-e.player1.rating-caption')
+          }}
+          {{flexberry-validationmessage error=model.errors.player1.rating pointing="pointing"}}
+        </div>
       </div>
     </div>
     <div class="eight wide column">
-      <div class="field">
-        <label>{{t 'forms.tenis-app-bpa-match-e.player2-caption'}}</label>
-        {{
-          flexberry-lookup
-          choose='showLookupDialog'
-          remove='removeLookupValue'
-          value=model.player2
-          displayAttributeName='lastName'
-          relationName='player2'
-          projection='bpa_PlayerL'
-          title=(t 'forms.tenis-app-bpa-match-e.player2-caption')
-          readonly=readonly
-        }}
-        {{flexberry-validationmessage error=model.errors.player2 pointing="pointing"}}
-      </div>
+      <div class="ui segment">
+        <div class="field">
+          <label>{{t 'forms.tenis-app-bpa-match-e.player2-caption'}}</label>
+          {{
+            flexberry-lookup
+            choose='showLookupDialog'
+            remove='removeLookupValue'
+            value=model.player2
+            displayAttributeName='lastName'
+            relationName='player2'
+            projection='bpa_PlayerL'
+            title=(t 'forms.tenis-app-bpa-match-e.player2-caption')
+            readonly=readonly
+          }}
+          {{flexberry-validationmessage error=model.errors.player2 pointing="pointing"}}
+        </div>
 
-      <div class="field">
-        {{
-          flexberry-field
-          placeholder=(t 'components.flexberry-field.placeholder')
-          readonly=true
-          required=true
-          value=model.player2.firstName
-          class=(if model.errors.player2.firstName 'error' '')
-          label=(t 'forms.tenis-app-bpa-match-e.player2.firstName-caption')
-        }}
-        {{flexberry-validationmessage error=model.errors.player2.firstName pointing="pointing"}}
-      </div>
+        <div class="field">
+          {{
+            flexberry-field
+            placeholder=(t 'components.flexberry-field.placeholder')
+            readonly=true
+            required=true
+            value=model.player2.firstName
+            class=(if model.errors.player2.firstName 'error' '')
+            label=(t 'forms.tenis-app-bpa-match-e.player2.firstName-caption')
+          }}
+          {{flexberry-validationmessage error=model.errors.player2.firstName pointing="pointing"}}
+        </div>
 
-      <div class="field">
-        {{
-          flexberry-field
-          placeholder=(t 'components.flexberry-field.placeholder')
-          readonly=true
-          required=true
-          value=model.player2.rating
-          class=(if model.errors.player2.rating 'error' '')
-          label=(t 'forms.tenis-app-bpa-match-e.player2.rating-caption')
-        }}
-        {{flexberry-validationmessage error=model.errors.player2.rating pointing="pointing"}}
+        <div class="field">
+          {{
+            flexberry-field
+            placeholder=(t 'components.flexberry-field.placeholder')
+            readonly=true
+            required=true
+            value=model.player2.rating
+            class=(if model.errors.player2.rating 'error' '')
+            label=(t 'forms.tenis-app-bpa-match-e.player2.rating-caption')
+          }}
+          {{flexberry-validationmessage error=model.errors.player2.rating pointing="pointing"}}
+        </div>
       </div>
     </div>
 

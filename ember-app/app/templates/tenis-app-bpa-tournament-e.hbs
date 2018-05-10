@@ -24,97 +24,106 @@
       </button>
     </div>
   </div>
-  <div class="field">
-  {{
-    flexberry-field
-    placeholder=(t 'components.flexberry-field.placeholder')
-    readonly=readonly
-    required=true
-    value=model.name
-    class=(if model.errors.name 'error' '')
-    label=(t 'forms.tenis-app-bpa-tournament-e.name-caption')
-  }}
-  {{flexberry-validationmessage error=model.errors.name pointing="pointing"}}
-</div>
-
-<div class="field">
-  <label>{{t 'forms.tenis-app-bpa-tournament-e.startDate-caption'}}</label>
-  {{
-    flexberry-datepicker
-    placeholder='(no value)'
-    readonly=readonly
-    value=model.startDate
-    class=(if model.errors.startDate 'error' '')
-  }}
-  {{flexberry-validationmessage error=model.errors.startDate pointing="pointing"}}
-</div>
-
-<div class="field">
-  <label>{{t 'forms.tenis-app-bpa-tournament-e.finishDate-caption'}}</label>
-  {{
-    flexberry-datepicker
-    placeholder='(no value)'
-    readonly=readonly
-    value=model.finishDate
-    class=(if model.errors.finishDate 'error' '')
-  }}
-  {{flexberry-validationmessage error=model.errors.finishDate pointing="pointing"}}
-</div>
-
-<div class="field">
-  {{
-    flexberry-field
-    placeholder=(t 'components.flexberry-field.placeholder')
-    readonly=readonly
-    required=true
-    value=model.maxGameScore
-    class=(if model.errors.maxGameScore 'error' '')
-    label=(t 'forms.tenis-app-bpa-tournament-e.maxGameScore-caption')
-  }}
-  {{flexberry-validationmessage error=model.errors.maxGameScore pointing="pointing"}}
-</div>
-
-<div class="field">
-  {{
-    flexberry-field
-    placeholder=(t 'components.flexberry-field.placeholder')
-    readonly=readonly
-    required=true
-    value=model.minGamesForWin
-    class=(if model.errors.minGamesForWin 'error' '')
-    label=(t 'forms.tenis-app-bpa-tournament-e.minGamesForWin-caption')
-  }}
-  {{flexberry-validationmessage error=model.errors.minGamesForWin pointing="pointing"}}
-</div>
-
-<div class="field">
-  <label>{{t 'forms.tenis-app-bpa-tournament-e.challenger-caption'}}</label>
-  {{
-    flexberry-groupedit
-    componentName="challengerGroupEdit"
-    mainModelProjection=modelProjection
-    modelProjection=modelProjection.attributes.challenger
-    content=model.challenger
-    readonly=readonly
-    orderable=false
-    class=(if model.errors.challenger 'error' '')
-  }}
-  {{flexberry-validationmessage error=model.errors.challenger pointing="pointing"}}
-</div>
-
-<div class="field">
-  <label>{{t 'forms.tenis-app-bpa-tournament-e.toss-caption'}}</label>
-  {{
-    flexberry-groupedit
-    componentName="tossGroupEdit"
-    mainModelProjection=modelProjection
-    modelProjection=modelProjection.attributes.toss
-    content=model.toss
-    readonly=readonly
-    orderable=false
-    class=(if model.errors.toss 'error' '')
-  }}
-  {{flexberry-validationmessage error=model.errors.toss pointing="pointing"}}
-</div>
-
+  <div class="ui two column stackable grid">
+    <div class="sixteen wide column">
+      <div class="field">
+        {{
+          flexberry-field
+          placeholder=(t 'components.flexberry-field.placeholder')
+          readonly=readonly
+          required=true
+          value=model.name
+          class=(if model.errors.name 'error' '')
+          label=(t 'forms.tenis-app-bpa-tournament-e.name-caption')
+        }}
+        {{flexberry-validationmessage error=model.errors.name pointing="pointing"}}
+      </div>
+    </div>
+    <div class="eight wide column">
+      <div class="field">
+        <label>{{t 'forms.tenis-app-bpa-tournament-e.startDate-caption'}}</label>
+        {{
+          flexberry-datepicker
+          placeholder='(no value)'
+          readonly=readonly
+          value=model.startDate
+          class=(if model.errors.startDate 'error' '')
+        }}
+        {{flexberry-validationmessage error=model.errors.startDate pointing="pointing"}}
+      </div>
+    </div>
+    <div class="eight wide column">
+      <div class="field">
+        <label>{{t 'forms.tenis-app-bpa-tournament-e.finishDate-caption'}}</label>
+        {{
+          flexberry-datepicker
+          placeholder='(no value)'
+          readonly=readonly
+          value=model.finishDate
+          class=(if model.errors.finishDate 'error' '')
+        }}
+        {{flexberry-validationmessage error=model.errors.finishDate pointing="pointing"}}
+      </div>
+    </div>
+    <div class="eight wide column">
+      <div class="field">
+        {{
+          flexberry-field
+          placeholder=(t 'components.flexberry-field.placeholder')
+          readonly=readonly
+          required=true
+          value=model.maxGameScore
+          class=(if model.errors.maxGameScore 'error' '')
+          label=(t 'forms.tenis-app-bpa-tournament-e.maxGameScore-caption')
+        }}
+        {{flexberry-validationmessage error=model.errors.maxGameScore pointing="pointing"}}
+      </div>
+    </div>
+    <div class="eight wide column">
+      <div class="field">
+        {{
+          flexberry-field
+          placeholder=(t 'components.flexberry-field.placeholder')
+          readonly=readonly
+          required=true
+          value=model.minGamesForWin
+          class=(if model.errors.minGamesForWin 'error' '')
+          label=(t 'forms.tenis-app-bpa-tournament-e.minGamesForWin-caption')
+        }}
+        {{flexberry-validationmessage error=model.errors.minGamesForWin pointing="pointing"}}
+      </div>
+    </div>
+    <div class="sixteen wide column">
+      <div class="field">
+        <label>{{t 'forms.tenis-app-bpa-tournament-e.challenger-caption'}}</label>
+        {{
+          flexberry-groupedit
+          componentName="challengerGroupEdit"
+          mainModelProjection=modelProjection
+          modelProjection=modelProjection.attributes.challenger
+          content=model.challenger
+          readonly=readonly
+          orderable=false
+          class=(if model.errors.challenger 'error' '')
+        }}
+        {{flexberry-validationmessage error=model.errors.challenger pointing="pointing"}}
+      </div>
+    </div>
+    <div class="sixteen wide column">
+      <div class="field">
+        <label>{{t 'forms.tenis-app-bpa-tournament-e.toss-caption'}}</label>
+        {{
+          flexberry-groupedit
+          componentName="tossGroupEdit"
+          mainModelProjection=modelProjection
+          modelProjection=modelProjection.attributes.toss
+          content=model.toss
+          readonly=readonly
+          orderable=false
+          class=(if model.errors.toss 'error' '')
+        }}
+        {{flexberry-validationmessage error=model.errors.toss pointing="pointing"}}
+      </div>
+    </div>
+  </div>
 </form>
